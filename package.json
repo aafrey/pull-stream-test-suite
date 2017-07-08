@@ -1,0 +1,33 @@
+{
+  "name": "micro-stuff",
+  "version": "1.0.0",
+  "description": "micro / pull-stream experients",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aafrey/micro-stuff.git"
+  },
+  "keywords": [
+    "micro",
+    "pull-streams"
+  ],
+  "author": "Austin Frey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aafrey/micro-stuff/issues"
+  },
+  "homepage": "https://github.com/aafrey/micro-stuff#readme",
+  "dependencies": {
+    "micro": "^7.3.3",
+    "pull-fetch": "^0.1.0",
+    "pull-file": "^1.0.0",
+    "pull-http-server": "^1.0.0",
+    "pull-net": "^1.0.1",
+    "pull-stream": "^3.6.0",
+    "pull-write-file": "^0.2.4",
+    "stream-to-pull-stream": "^1.7.2"
+  }
+}
