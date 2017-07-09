@@ -1,6 +1,6 @@
 const fs = require('fs')
-const text =
 const file = fs.createWriteStream('./big.file')
+const text =
 "Oh, I sure like her, Marty, she is such a sweet girl. Isn't tonight the night of the big date?\n \
 Well, now we gotta sneak this back into my laboratory, we've gotta get you home. Where were we.\n \
 Biff. It's taken me almost thirty years and my entire family fortune to realize the vision of \n \
