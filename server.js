@@ -1,20 +1,22 @@
 const gzip = require('zlib').createGzip(),
       path = require('path')
 
-const { pull, file, toPull, take } = require('./helper')
+const { pull, file, toPull, log, createHttpServer } = require('./helper')
 
 const zipStream = toPull(gzip)
 const inputFile = path.resolve(__dirname, './big.file')
 
-module.exports = function(
-  req, res
+createHttpServer( function (
+  stream
 ){
   pull(
     file(inputFile),
-    take(1),
     zipStream,
-    toPull.sink(res.end)
+    stream.sink
   )
-}
+  res.on('finish', function() {
+    res.end()
+  })
+}).listen(9999, '127.0.0.1')
 
 

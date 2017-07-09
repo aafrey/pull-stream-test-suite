@@ -2,11 +2,12 @@ const pull = require('pull-stream'),
       file = require('pull-file'),
       write = require('pull-write-file'),
       toPull = require('stream-to-pull-stream'),
+      toStream = require('pull-stream-to-stream'),
     { log, take } = pull,
       createNetServer = require('pull-net/server'),
       connect = require('pull-net/client'),
       createHttpServer = require('pull-http-server'),
-    { fetch } = require('pull-fetch')
+      fetch = require('pull-fetch')
 
 module.exports = {
   pull,
